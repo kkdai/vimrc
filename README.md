@@ -91,8 +91,8 @@ PLUGINS
 * [Nerd Commenter](https://github.com/scrooloose/nerdcommenter): Vim plugin for intensely orgasmic commenting.
 
   Useful commands:    
-    `\c + spece` toggles the Comment current selected in visual mode.
-    `\c + c` Comment current selected in visual mode.
+    `\c + spece` - Toggles the comment current selected in visual mode.    
+    `\c + c`  - Comment current selected in visual mode.
 
 Other good references
 ---------------------
