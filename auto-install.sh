@@ -23,4 +23,4 @@ git submodule update --init
 cd bundle/command-t/ruby/command-t
 (ruby extconf.rb && make) || warn "Can't compile Command-T."
 
-echo "vgod's vimrc is installed."
+echo "kkdai's vimrc is installed."
