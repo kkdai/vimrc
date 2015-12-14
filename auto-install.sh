@@ -16,7 +16,7 @@ die() {
 
 git clone https://github.com/kkdai/vimrc.git "$VIMHOME"
 cd "$VIMHOME"
-git submodule update --init
+git submodule update 
 
 ./install-vimrc.sh
 
