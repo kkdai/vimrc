@@ -59,6 +59,8 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
+"Compile and run c direct in F8
+map <F8> : !gcc %; and ./a.out <CR>
 
 "Hotkey for NERDTreeToggle
 map <F3> :NERDTreeToggle<CR>
