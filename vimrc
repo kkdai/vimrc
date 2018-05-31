@@ -5,20 +5,26 @@ execute pathogen#infect()
 set t_Co=256
 :colorscheme molokai
 
+
 "Vundle
 set nocompatible              " be iMproved, required
 filetype off  
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tagbar'
-call vundle#end()            " required
-
-
+Plugin 'neocomplete.vim'
+Plugin 'nerdtree'
+Plugin 'c9s/helper.vim'
+Plugin 'c9s/treemenu.vim'
+Plugin 'c9s/vikube.vim'
+Plugin 'scrooloose/nerdcommenter'
+call vundle#end() 
 filetype plugin indent on    " required
-"filetype plugin on  
+
 
 "backspace behavior
 set backspace=indent,eol,start
@@ -42,6 +48,8 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_fmt_command = "goimports"
+let g:go_term_enabled = 1
+let g:go_list_type = "quickfix"
 
 "Hotkey for vim-go
 au FileType go nmap <leader>r <Plug>(go-run)
@@ -59,6 +67,7 @@ au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
 au FileType go nmap <Leader>s <Plug>(go-implements)
 au FileType go nmap <Leader>e <Plug>(go-rename)
 
+map <leader>jt  <Esc>:%!json_xs -f json -t json-pretty<CR>
 "Compile and run c direct in F8
 map <F8> : !gcc %; and ./a.out <CR>
 
