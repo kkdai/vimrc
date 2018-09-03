@@ -16,10 +16,9 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'fatih/vim-go'
 Plugin 'tagbar'
-Plugin 'neocomplete.vim'
-Plugin 'nerdtree'
 Plugin 'c9s/helper.vim'
 Plugin 'c9s/treemenu.vim'
+Plugin 'c9s/hypergit.vim'
 Plugin 'c9s/vikube.vim'
 Plugin 'scrooloose/nerdcommenter'
 call vundle#end() 
@@ -38,7 +37,15 @@ syntax enable
 set clipboard=unnamed
 
 "neocomplete
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
+if has('nvim')
+  Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plugin 'Shougo/deoplete.nvim'
+  Plugin 'roxma/nvim-yarp'
+  Plugin 'roxma/vim-hug-neovim-rpc'
+endif
+let g:deoplete#enable_at_startup = 1
 
 "vim-go setting
 let g:go_disable_autoinstall = 0  
