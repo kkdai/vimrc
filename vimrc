@@ -48,6 +48,7 @@ endif
 let g:deoplete#enable_at_startup = 1
 
 "vim-go setting
+let g:go_version_warning = 0
 let g:go_disable_autoinstall = 0  
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
